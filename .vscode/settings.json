@@ -1,3 +1,10 @@
 {
-    "clangd.arguments": ["/I/${workspaceFolder}"]
+    "clangd.arguments": [
+        "/I/${workspaceFolder}"
+    ],
+    "files.associations": {
+        "user.h": "c",
+        "types.h": "c",
+        "stat.h": "c"
+    }
 }
