@@ -6,6 +6,8 @@
         "user.h": "c",
         "types.h": "c",
         "stat.h": "c",
-        "typeinfo": "c"
+        "typeinfo": "c",
+        "param.h": "c",
+        "fs.h": "c"
     }
 }
