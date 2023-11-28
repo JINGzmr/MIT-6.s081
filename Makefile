@@ -153,7 +153,7 @@ UPROGS=\
 	$U/_pingpong\
 	$U/_primes\
 	$U/_find\
-	$U/xargs\
+	$U/_xargs\
 	
 
 
