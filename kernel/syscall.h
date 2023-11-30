@@ -3,7 +3,7 @@
 #define SYS_exit    2
 #define SYS_wait    3
 #define SYS_pipe    4
-#define SYS_read    5
+#define SYS_read    5 //1<<SYS_read（1左移5为）就是32（整型），也就是它对应的掩码mask
 #define SYS_kill    6
 #define SYS_exec    7
 #define SYS_fstat   8
@@ -20,3 +20,6 @@
 #define SYS_link   19
 #define SYS_mkdir  20
 #define SYS_close  21
+#define SYS_trace  22
+
+// 将比特位中的31个低位置为1，即表示以上所有的系统调用

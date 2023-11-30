@@ -118,6 +118,7 @@ extern uint64 sys_unlink(void);
 extern uint64 sys_wait(void);
 extern uint64 sys_write(void);
 extern uint64 sys_uptime(void);
+extern uint64 sys_trace(void);
 
 // 这个数组是一个函数指针数组，其中包含了系统调用的具体实现函数。
 // 每个系统调用都有一个唯一的编号（例如 SYS_fork、SYS_exit），这些编号被用作索引来查找相应的系统调用函数。
@@ -144,6 +145,7 @@ static uint64 (*syscalls[])(void) = {
 [SYS_link]    sys_link,
 [SYS_mkdir]   sys_mkdir,
 [SYS_close]   sys_close,
+[SYS_trace]   sys_trace,
 };
 
 // 这个函数是系统调用的入口点。
