@@ -8,6 +8,7 @@
 
 struct cpu cpus[NCPU];
 
+// 保存进程状态的数组
 struct proc proc[NPROC];
 
 struct proc* initproc;
@@ -647,4 +648,18 @@ int trace(int mask) {
     struct proc* p = myproc();
     p->mask = mask;
     return 0;
+}
+
+// 统计状态不为 UNUSED 状态的进程数量
+int procnum(void) { 
+  int count = 0;
+  struct proc *p;
+  for (p = proc; p < &proc[NPROC]; p++) { //遍历数组
+      acquire(&p->lock); //加锁
+      if(p->state != UNUSED){ //查看状态
+          count++;
+      }
+      release(&p->lock); //解锁
+  }
+  return count;
 }

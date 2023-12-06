@@ -21,5 +21,6 @@
 #define SYS_mkdir  20
 #define SYS_close  21
 #define SYS_trace  22
+#define SYS_sysinfo 23
 
 // 将比特位中的31个低位置为1，即表示以上所有的系统调用
